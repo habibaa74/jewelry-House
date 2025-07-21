@@ -1,0 +1,442 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+::-moz-selection {
+  background-color: #857255;
+  color: white;
+}
+
+::selection {
+  background-color: #857255;
+  color: white;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  color: white;
+}
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 30%;
+  }
+}
+
+.sticky {
+  position: fixed;
+  background-color: rgba(141, 123, 98, 0.5843137255);
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(5rem);
+}
+
+.section {
+  transition: transform 0.7s, opacity 0.7s;
+}
+
+h3 {
+  color: white;
+  font-size: 6rem;
+  text-transform: uppercase;
+  font-family: "Caveat", cursive;
+  text-align: center;
+}
+
+.header {
+  min-height: 100vh;
+  background-color: #c6ab82;
+  overflow: hidden;
+}
+@media only screen and (max-width: 56.25em) {
+  .header {
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+  }
+}
+.header .nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding: 1rem 3rem;
+  z-index: 1;
+}
+@media only screen and (max-width: 56.25em) {
+  .header .nav {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem 4rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .header .nav {
+    padding: 2rem;
+    gap: 2rem;
+  }
+}
+.header .nav__logo {
+  font-family: "Caveat", cursive;
+  font-size: 3rem;
+  transition: all 0.5s;
+}
+.header .nav__logo:hover {
+  text-shadow: 0.5rem 1rem 1rem rgba(0, 0, 0, 0.203);
+}
+.header .nav__logo a {
+  color: white;
+  text-decoration: none;
+}
+.header .nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+.header .nav ul li {
+  list-style: none;
+  font-size: 2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  text-transform: uppercase;
+}
+.header .nav ul li:hover {
+  transform: scale(1.08);
+}
+.header .nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+.header .hero {
+  width: 90%;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+@media only screen and (max-width: 37.5em) {
+  .header .hero {
+    flex-direction: column;
+  }
+  .header .hero .hero__img {
+    border-top-left-radius: 50rem;
+    border-top-right-radius: 50rem;
+    order: 1;
+    width: 100%;
+  }
+  .header .hero .hero__text {
+    order: 2;
+    width: 100%;
+  }
+}
+.header .hero__img {
+  width: 35%;
+  border-top-left-radius: 25rem;
+  border-top-right-radius: 25rem;
+  overflow: hidden;
+}
+@media only screen and (max-width: 56.25em) {
+  .header .hero__img {
+    width: 45%;
+  }
+}
+.header .hero__img img {
+  width: 100%;
+}
+.header .hero__text {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  font-family: "Caveat", cursive;
+  color: white;
+}
+.header .hero__text h1 {
+  font-size: 7rem;
+}
+.header .hero__text span {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 1rem 0;
+}
+.header .hero__text .btn__learn-us {
+  background-color: #857255;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 2rem 3rem;
+  text-transform: uppercase;
+  transition: all 0.5s;
+  font-size: 2rem;
+}
+.header .hero__text .btn__learn-us a {
+  text-decoration: none;
+  color: white;
+}
+.header .hero__text .btn__learn-us:hover {
+  transform: scale(1.1);
+  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.315);
+  background-color: #8d7b62;
+}
+
+.section__about-us {
+  min-height: 50vh;
+  background-image: linear-gradient(105deg, #c6ab82 0%, #857255 50%, transparent 50%), url(/images/about-1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+@media only screen and (max-width: 37.5em) {
+  .section__about-us {
+    background-image: linear-gradient(#352d23), url(/images/about-1.jpg);
+    background-blend-mode: multiply;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    padding: 2rem;
+  }
+}
+.section__about-us .container {
+  padding: 5rem;
+}
+.section__about-us .container h3 {
+  text-align: initial;
+  margin-left: 17rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .section__about-us .container h3 {
+    margin-left: 10rem;
+  }
+}
+.section__about-us .container p {
+  text-align: center;
+  margin-top: 2rem;
+  width: 40%;
+  color: white;
+  line-height: 4rem;
+  font-size: 2rem;
+  font-family: "Antic Didone", serif;
+}
+@media only screen and (max-width: 37.5em) {
+  .section__about-us .container {
+    padding: 1rem;
+  }
+  .section__about-us .container h3 {
+    text-align: center;
+    margin-left: 0;
+  }
+  .section__about-us .container p {
+    width: 100%;
+  }
+}
+
+.section__bestseller {
+  max-height: 100vh;
+  background-color: #c6ab82;
+}
+.section__bestseller .container {
+  padding: 2rem;
+  text-align: center;
+}
+.section__bestseller .slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 180rem;
+  margin: 4rem auto;
+  overflow: hidden;
+}
+.section__bestseller .slider-container button {
+  border: none;
+  background-color: #857255;
+  width: 7rem;
+  height: 7rem;
+  font-size: 2rem;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+}
+.section__bestseller .slider-wrapper {
+  width: 140rem;
+  overflow: hidden;
+}
+.section__bestseller .slider-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+.section__bestseller .slide {
+  display: flex;
+  flex: 0 0 25%;
+  padding: 0.5rem;
+}
+@media only screen and (max-width: 75em) {
+  .section__bestseller .slide {
+    flex: 0 0 33.33%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .section__bestseller .slide {
+    flex: 0 0 50%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .section__bestseller .slide {
+    flex: 0 0 100%;
+  }
+}
+.section__bestseller .slide img {
+  width: 100%;
+  display: block;
+  border-radius: 1.2rem;
+}
+
+.section__rings, .section__necklaces, .section__earrings, .section__bracelets {
+  background-color: #9d896d;
+  min-height: 100vh;
+  padding: 4rem;
+  color: #4d4232;
+}
+.section__rings .cards__container, .section__necklaces .cards__container, .section__earrings .cards__container, .section__bracelets .cards__container {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+}
+@media only screen and (max-width: 75em) {
+  .section__rings .cards__container, .section__necklaces .cards__container, .section__earrings .cards__container, .section__bracelets .cards__container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .section__rings .cards__container, .section__necklaces .cards__container, .section__earrings .cards__container, .section__bracelets .cards__container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .section__rings .cards__container, .section__necklaces .cards__container, .section__earrings .cards__container, .section__bracelets .cards__container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.section__rings .cards__container .card, .section__necklaces .cards__container .card, .section__earrings .cards__container .card, .section__bracelets .cards__container .card {
+  background-color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 1.2rem;
+  transition: transform 0.5s, opacity 0.5s;
+}
+.section__rings .cards__container .card:hover img, .section__necklaces .cards__container .card:hover img, .section__earrings .cards__container .card:hover img, .section__bracelets .cards__container .card:hover img {
+  transform: scale(1.2);
+}
+.section__rings .cards__container .card .img, .section__necklaces .cards__container .card .img, .section__earrings .cards__container .card .img, .section__bracelets .cards__container .card .img {
+  overflow: hidden;
+  height: 35rem;
+}
+.section__rings .cards__container .card .img img, .section__necklaces .cards__container .card .img img, .section__earrings .cards__container .card .img img, .section__bracelets .cards__container .card .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.section__rings .cards__container .card .details, .section__necklaces .cards__container .card .details, .section__earrings .cards__container .card .details, .section__bracelets .cards__container .card .details {
+  margin-top: 1rem;
+}
+.section__rings .cards__container .card .details h4, .section__necklaces .cards__container .card .details h4, .section__earrings .cards__container .card .details h4, .section__bracelets .cards__container .card .details h4 {
+  font-family: "Caveat", cursive;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+.section__rings .cards__container .card .details p, .section__necklaces .cards__container .card .details p, .section__earrings .cards__container .card .details p, .section__bracelets .cards__container .card .details p {
+  font-weight: 700;
+  font-size: 2rem;
+}
+.section__rings .cards__container .card .details p span, .section__necklaces .cards__container .card .details p span, .section__earrings .cards__container .card .details p span, .section__bracelets .cards__container .card .details p span {
+  margin-left: 2px;
+  font-family: "Caveat", cursive;
+}
+.section__rings .cards__container .card .star, .section__necklaces .cards__container .card .star, .section__earrings .cards__container .card .star, .section__bracelets .cards__container .card .star {
+  color: gold;
+  font-size: 2rem;
+}
+
+.section__necklaces, .section__bracelets {
+  background-color: #c6ab82;
+}
+
+.footer {
+  background-color: #4d4232;
+  text-align: center;
+  padding: 2rem;
+}
+.footer h6 {
+  font-size: 4rem;
+  font-family: "Caveat", cursive;
+}
+.footer__container {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+@media only screen and (max-width: 37.5em) {
+  .footer__container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.footer__container .contact p {
+  margin-bottom: 1.2rem;
+  font-size: 2rem;
+}
+.footer__container .contact p span {
+  margin-left: 5px;
+}
+.footer i {
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.footer i:hover {
+  color: #8d7b62;
+}
+.footer .social p {
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Caveat", cursive;
+}
+.footer .social__icon {
+  margin-top: 1.2rem;
+}
+.footer .social__icon i {
+  margin-left: 4px;
+  font-size: 1.7rem;
+}
+.footer .copy__rights {
+  font-size: 2rem;
+  width: 50%;
+  margin: 0 auto;
+  grid-column: 1/-1;
+}
+.footer .copy__rights .name {
+  color: #c3ae8d;
+  font-family: "Caveat", cursive;
+}/*# sourceMappingURL=style.css.map */
