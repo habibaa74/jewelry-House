@@ -365,7 +365,7 @@ h3 {
 margin-top: 2rem;
 display: grid;
 grid-template-columns: 1fr 1fr 1fr;
-  @media only screen and (max-width:37.5em){
+@media only screen and (max-width:37.5em){
  grid-template-columns: 1fr 1fr;
   }
 .contact{
@@ -406,7 +406,9 @@ grid-template-columns: 1fr 1fr 1fr;
 font-size: 2rem;
 width: 50%;
 margin: 0 auto;
+@media only screen and (max-width:37.5em){
 grid-column: 1/-1;
+  }
 .name{
  color: #c3ae8d;
    font-family: "Caveat", cursive;
