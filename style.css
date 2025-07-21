@@ -434,7 +434,11 @@ h3 {
   font-size: 2rem;
   width: 50%;
   margin: 0 auto;
-  grid-column: 1/-1;
+}
+@media only screen and (max-width: 37.5em) {
+  .footer .copy__rights {
+    grid-column: 1/-1;
+  }
 }
 .footer .copy__rights .name {
   color: #c3ae8d;
